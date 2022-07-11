@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Navbar.scss'
-import { images } from '../../constants';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 const Navbar = () => {
@@ -30,7 +29,7 @@ const Navbar = () => {
                 {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
                     <li key={`link-${item}`} className="app__flex nav-text">
                         <div />
-                        <a style={nav ? { color: "black" } : { color: 'white' }} href={`#${item}`}>{item}</a>
+                        <a className={nav? 'linkStyle1' : 'linkStyle2'}  href={`#${item}`}>{item}</a>
                     </li>
 
                 ))}
