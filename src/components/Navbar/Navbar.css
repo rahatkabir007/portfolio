@@ -4,7 +4,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-color {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(43, 41, 41, 0.089);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -42,7 +54,7 @@
   list-style: none;
 }
 .app__navbar-links li {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   cursor: pointer;
   flex-direction: column;
   font-size: 18px;
@@ -55,16 +67,19 @@
   margin-bottom: 5px;
 }
 .app__navbar-links li a {
-  color: var(--gray-color);
   text-decoration: none;
   flex-direction: column;
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
+  padding: 6px 20px;
+  border: 1px solid transparent;
 }
 .app__navbar-links li a:hover {
-  color: var(--secondary-color);
   cursor: pointer;
+  padding: 6px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid transparent;
 }
 .app__navbar-links li:hover div {
   background: var(--secondary-color);

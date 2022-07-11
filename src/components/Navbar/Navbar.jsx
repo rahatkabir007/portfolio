@@ -6,18 +6,31 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
+    const [nav, setNav] = useState(false);
 
+    const changeBackground = () => {
+        if (window.scrollY >= 80) {
+            setNav(true)
+        }
+        else {
+            setNav(false);
+        }
+    }
 
+    window.addEventListener('scroll', changeBackground)
     return (
-        <nav className='app__navbar'>
+        <nav className={nav ? 'app__navbar-color' : 'app__navbar'}
+
+        >
             <div className='app__navbar-logo'>
-                <img src={images.logo} alt="logo" />
+
+                <p style={nav ? { color: "black", fontSize: '24px' } : { color: 'white', fontSize: '24px' }}>Rahat Kabir</p>
             </div>
             <ul className='app__navbar-links'>
                 {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
                     <li key={`link-${item}`} className="app__flex nav-text">
                         <div />
-                        <a href={`#${item}`}>{item}</a>
+                        <a style={nav ? { color: "black" } : { color: 'white' }} href={`#${item}`}>{item}</a>
                     </li>
 
                 ))}
@@ -25,14 +38,14 @@ const Navbar = () => {
 
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={() => setToggle(true)} />
-                
+
                 {
                     toggle && (
                         <motion.div
                             whileInView={{ x: [150, 0] }} //x = 300 means 300pixel
-                            transition={{duration: 0.85, ease: 'easeOut'}}
+                            transition={{ duration: 0.85, ease: 'easeOut' }}
                         >
-                            <HiX onClick={() => setToggle(false)}/>
+                            <HiX onClick={() => setToggle(false)} />
                             <ul>
                                 {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
                                     <li key={item} >
