@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 .app__footer-form button:hover {
-  background-color: #2430af;
+  background-color: var(--secondary-color);
 }
 @media screen and (max-width: 768px) {
   .app__footer-form {

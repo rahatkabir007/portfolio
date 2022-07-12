@@ -8,6 +8,7 @@
   -webkit-backdrop-filter: blur(4px);
   position: fixed;
   z-index: 2;
+  margin-bottom: 2rem;
 }
 
 .app__navbar-color {
@@ -74,7 +75,7 @@
   transition: all 0.3s ease-in-out;
   padding: 6px 20px;
   border: 1px solid transparent;
-  color: black;
+  color: #0C0F0A;
 }
 .app__navbar-links li .linkStyle1:hover {
   cursor: pointer;
@@ -90,7 +91,7 @@
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   padding: 6px 20px;
-  color: white;
+  color: #0C0F0A;
   border: 1px solid transparent;
 }
 .app__navbar-links li .linkStyle2:hover {

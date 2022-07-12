@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.scss'
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false);
@@ -23,7 +24,8 @@ const Navbar = () => {
         >
             <div className='app__navbar-logo'>
 
-                <p style={nav ? { color: "black", fontSize: '24px' } : { color: 'white', fontSize: '24px' }}>Rahat Kabir</p>
+                <p style={{ color: 'white',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)', fontSize: '24px', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.2rem',border: '1px solid black', padding: '2px 7px' }}>Rahat Kabir</p>
             </div>
             <ul className='app__navbar-links'>
                 {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
