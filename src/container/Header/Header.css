@@ -152,6 +152,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 0;
+    display: none;
   }
   .app__header-circles div {
     margin: 1rem;
