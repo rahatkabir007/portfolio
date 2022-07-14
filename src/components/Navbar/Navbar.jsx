@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className='app__navbar-logo'>
 
                 <p style={{ color: 'white',
-                backgroundColor: 'rgba(0, 0, 0, 0.9)', fontSize: '24px', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.2rem',border: '1px solid black', padding: '2px 7px' }}>Rahat Kabir</p>
+                backgroundColor: 'rgba(0, 0, 0, 0.9)', fontSize: '18px', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '0.2rem',border: '1px solid black', padding: '2px 7px' }}>Rahat Kabir</p>
             </div>
             <ul className='app__navbar-links'>
                 {['home', 'about', 'contact', 'work', 'skills'].map((item) => (

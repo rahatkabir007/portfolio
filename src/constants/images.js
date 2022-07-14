@@ -34,6 +34,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import about from '../assets/about.jpg';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript,
@@ -59,4 +60,5 @@ export default {email, mobile, api, cpp, css, figma, flutter, git, graphql, html
     nb,
     skype,
     spotify,
+    about
 };

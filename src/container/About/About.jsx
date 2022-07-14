@@ -3,6 +3,7 @@ import './About.scss';
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { images } from '../../constants';
 
 
 const About = () => {
@@ -23,7 +24,27 @@ const About = () => {
     <>
       <h2 className="head-text">I Know that <span>Good Development</span> <br />means  <span>Good Business</span></h2>
 
-      <div className="app__profiles">
+      <div className='app__aboutDetails'>
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className="app__aboutDetails-text"
+        >
+          <p> <span>I</span> am a Junior Web Developer Who Is Pursuing His Career Through Learning
+            More And More Everyday. I Am a Student. And I have Skills on React.js, Javascript And Many More.</p>
+          <a href="rahat.pdf" download="Rahat.pdf">Download Resume
+          </a>
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className="app__aboutDetails-image"
+        >
+          <img src={images.about} alt="" />
+        </motion.div>
+      </div>
+
+      <div className="app__profiles">     
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
