@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import './Works.scss';
 import { AppWrap, MotionWrap } from '../wrapper';
 import { client, urlFor } from '../client';
+import { Link } from 'react-router-dom';
 
 
 const Works = () => {
@@ -104,6 +105,11 @@ const Works = () => {
                     </div>
                 ))}
             </motion.div>
+
+            <div className='go-back'>
+                <Link to="/">Go Back to Portfolio
+                </Link>
+            </div>
         </>
     )
 }
