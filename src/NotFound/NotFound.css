@@ -1,0 +1,55 @@
+.main2 {
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.banner img {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.text {
+    margin-top: 1rem;
+}
+
+.primary-btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(43, 108, 176);
+    border: 1px solid rgb(66, 153, 225);
+    line-height: 26px;
+    text-decoration: none;
+}
+
+/* Mobile device */
+@media only screen and (max-width:688px) {
+    .main2 {
+        width: 100%;
+        margin: 0px 0px;
+    }
+
+    .banner img {
+        width: 80%;
+    }
+}
+
+
+/* Tab */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .main2 {
+        width: 100%;
+        margin: 0px 0px;
+    }
+
+    .banner img {
+        width: 80%;
+    }
+}

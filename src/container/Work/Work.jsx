@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
+import { Link } from 'react-router-dom';
 
 
 const Work = () => {
@@ -104,7 +105,13 @@ const Work = () => {
             </div>
           </div>
         ))}
+
       </motion.div>
+
+      <div className='show-more'>
+        <Link to="/works">Show More Projects
+        </Link>
+      </div>
     </>
   )
 }
