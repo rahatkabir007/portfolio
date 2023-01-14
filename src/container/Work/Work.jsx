@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Best');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data);
+      setFilterWork(data.filter((work) => work.tags.includes("Best")));
     });
   }, []);
 
@@ -30,8 +30,8 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
-        setFilterWork(works);
+      if (item === 'Best') {
+        setFilterWork(works.filter((work) => work.tags.includes("Best")));
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
@@ -43,7 +43,7 @@ const Work = () => {
     <>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'Best'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
