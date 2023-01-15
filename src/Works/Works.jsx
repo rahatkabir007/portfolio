@@ -6,12 +6,14 @@ import { AppWrap, MotionWrap } from '../wrapper';
 import { client, urlFor } from '../client';
 import { Link } from 'react-router-dom';
 
+const simplified = true;
 
 const Works = () => {
     const [works, setWorks] = useState([]);
     const [filterWork, setFilterWork] = useState([]);
     const [activeFilter, setActiveFilter] = useState('All');
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+
 
     useEffect(() => {
         const query = '*[_type == "works"]';
@@ -42,10 +44,11 @@ const Works = () => {
         <>
             <h2 className="head-text">My Creative <span>Portfolios</span></h2>
             <div className="app__work-filter">
-                {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+                {['UI/UX', 'HTML/CSS', 'Javascript', 'React JS', 'All'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}
+                        style={{ textTransform: 'capitalize' }}
                         className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
                     >
                         {item}
@@ -118,4 +121,5 @@ export default AppWrap(
     MotionWrap(Works, 'app__works'),
     'work',
     'app__primarybg',
+    simplified
 );
