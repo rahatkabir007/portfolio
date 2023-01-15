@@ -1,0 +1,74 @@
+.loader-container {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes ldio-nv24sw08439 {
+    0% {
+        transform: scale(1.1500000000000001)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.ldio-nv24sw08439 div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 13.333333333333336px;
+    left: 13.333333333333336px;
+    background: #93dbe9;
+    animation: ldio-nv24sw08439 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    animation-delay: -0.3s;
+}
+
+.ldio-nv24sw08439 div:nth-child(2) {
+    top: 13.333333333333336px;
+    left: 106.66666666666666px;
+    background: #bbcedd;
+    animation-delay: -0.2s;
+}
+
+.ldio-nv24sw08439 div:nth-child(3) {
+    top: 106.66666666666666px;
+    left: 13.333333333333336px;
+    background: #dce4eb;
+    animation-delay: 0s;
+}
+
+.ldio-nv24sw08439 div:nth-child(4) {
+    top: 106.66666666666666px;
+    left: 106.66666666666666px;
+    background: #689cc5;
+    animation-delay: -0.1s;
+}
+
+.loadingio-spinner-cube-m29t9w21eu {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+}
+
+.ldio-nv24sw08439 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-nv24sw08439 div {
+    box-sizing: content-box;
+}
